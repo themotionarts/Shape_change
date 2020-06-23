@@ -12,6 +12,7 @@ public class platform : MonoBehaviour
     bool destroyed = false;
     public GameObject newPlatformPrefab;
     public Vector3 spawnPos;
+    public GameObject[] platforms;
     void Start()
     {
         
@@ -24,7 +25,8 @@ public class platform : MonoBehaviour
         rb.MovePosition(rb.position + new Vector3(0, 0, -1) * speed * Time.deltaTime);
         if(rb.position.z < 45 && spawned != true)
         {
-            Instantiate(newPlatformPrefab, transform.position +  new Vector3(0, 0, 174), new Quaternion(0, 0, 0, 0));
+            
+            Instantiate(platforms[Random.Range(0, 2)], transform.position +  new Vector3(0, 0, 174), new Quaternion(0, 0, 0, 0));
             spawned = true;
         }
         if(rb.position.z < -100 && destroyed != true)

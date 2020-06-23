@@ -126,6 +126,9 @@ MonoBehaviour:
   rb: {fileID: 7144258130903120776}
   newPlatformPrefab: {fileID: 7144258130903120817}
   spawnPos: {x: 0, y: -3.13, z: 174.8}
+  platforms:
+  - {fileID: 7144258130903120817}
+  - {fileID: 1591662107229139555, guid: 277638c603059aa42bac4c456107c1c0, type: 3}
 --- !u!54 &7144258130903120776
 Rigidbody:
   m_ObjectHideFlags: 0

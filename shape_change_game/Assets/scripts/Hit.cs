@@ -20,7 +20,7 @@ public class Hit : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(canvas, new Vector3 (0, 0, 0), Quaternion.identity);//add game over to screen
-        Time.timeScale = 0f;
+        /*Instantiate(canvas, new Vector3 (0, 0, 0), Quaternion.identity);//add game over to screen
+        Time.timeScale = 0f;*/
     }
 }
