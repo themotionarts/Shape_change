@@ -134,18 +134,18 @@ public class DrawingManager : MonoBehaviour
     {
         mousePointer.GetComponent<TargetJoint2D>().target = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x + offsetX,
                                                                         Camera.main.ScreenToWorldPoint(Input.mousePosition).y + offsetY);
+        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition).x + offsetX.ToString());
+        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition).y + offsetY.ToString());
     }
 
     void Update()
     {
         // hit detection by mouse position for the on drawing collision handling
         if (overlapHandling == overlapHandlingChoices.Cut_After_Collision)
-            hit = Physics2D.Raycast(mousePointer.transform.position, Vector2.zero,
-Mathf.Infinity, layerMask);
+            hit = Physics2D.Raycast(mousePointer.transform.position, Vector2.zero, Mathf.Infinity, layerMask);
 
         // mouseRay detects if the mouse is over some object
-        mouseRay = Physics2D.Raycast((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero,
-Mathf.Infinity, layerMask);
+        mouseRay = Physics2D.Raycast((Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, layerMask);
 
         if (Input.GetMouseButtonDown(0))
         {
