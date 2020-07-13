@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39663d19b32edad49a817f3461c4ba3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawing: {fileID: 0}
+  drawingObject: {fileID: 6950042969974918092, guid: e481f23629066d047accc78a63e4f1d8,
+    type: 3}
   speed: 20
   rb: {fileID: 1591662107229139546}
   newPlatformPrefab: {fileID: 1591662107229139555}
@@ -130,6 +133,7 @@ MonoBehaviour:
   platforms:
   - {fileID: 7144258130903120817, guid: a47e8df0854938246aa26dad4cab2207, type: 3}
   - {fileID: 1591662107229139555}
+  self: {fileID: 1591662107229139555}
 --- !u!54 &1591662107229139546
 Rigidbody:
   m_ObjectHideFlags: 0

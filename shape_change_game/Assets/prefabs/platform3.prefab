@@ -32,20 +32,6 @@ Transform:
   m_Father: {fileID: 7672046228229078043}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &3516611651940455197
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6581522656666275777}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 3c575ea5ba352aa46aaab74a43909950, type: 3}
 --- !u!64 &8870820754708896884
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -53,6 +39,20 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5439211354533110318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 3c575ea5ba352aa46aaab74a43909950, type: 3}
+--- !u!64 &3516611651940455197
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581522656666275777}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 7672046228229078053}
   - component: {fileID: 7672046228229078054}
   m_Layer: 0
-  m_Name: platform (1)
+  m_Name: platform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,6 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39663d19b32edad49a817f3461c4ba3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawing: {fileID: 0}
+  drawingObject: {fileID: 6950042969974918092, guid: e481f23629066d047accc78a63e4f1d8,
+    type: 3}
   speed: 20
   rb: {fileID: 7672046228229078054}
   newPlatformPrefab: {fileID: 7672046228229078047}
@@ -175,6 +178,7 @@ MonoBehaviour:
   platforms:
   - {fileID: 7672046228229078047}
   - {fileID: 1591662107229139555, guid: 277638c603059aa42bac4c456107c1c0, type: 3}
+  self: {fileID: 7672046228229078047}
 --- !u!54 &7672046228229078054
 Rigidbody:
   m_ObjectHideFlags: 0

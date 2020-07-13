@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8459636565944231208}
   - component: {fileID: 5050515100652956572}
   - component: {fileID: 7735486381914285063}
+  - component: {fileID: 7640921295252894210}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -147,3 +148,24 @@ EdgeCollider2D:
   m_Points:
   - {x: 8.615121, y: 28.126251}
   - {x: 13.7651205, y: 28.126251}
+--- !u!50 &7640921295252894210
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6950042969974918092}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

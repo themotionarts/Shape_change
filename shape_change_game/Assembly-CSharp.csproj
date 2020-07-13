@@ -71,9 +71,8 @@
     <Compile Include="Assets\2DPhysicsDraw\Scripts\Teleport.cs" />
     <Compile Include="Assets\2DPhysicsDraw\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\2DPhysicsDraw\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
-    <Compile Include="Assets\Scenes\LineDraw.cs" />
-    <Compile Include="Assets\scripts\DrawLine.cs" />
     <Compile Include="Assets\scripts\Hit.cs" />
+    <Compile Include="Assets\scripts\LineDraw.cs" />
     <Compile Include="Assets\scripts\Menu.cs" />
     <Compile Include="Assets\scripts\Settings.cs" />
     <Compile Include="Assets\scripts\pause_game.cs" />

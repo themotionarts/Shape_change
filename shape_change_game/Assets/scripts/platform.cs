@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class platform : MonoBehaviour
 {
+    public LineDraw drawing;
+    public GameObject drawingObject;
     // Start is called before the first frame update
     public float speed;
     public Rigidbody rb;
@@ -13,9 +15,14 @@ public class platform : MonoBehaviour
     public GameObject newPlatformPrefab;
     public Vector3 spawnPos;
     public GameObject[] platforms;
+    public GameObject self;
     void Start()
     {
-        
+        self = this.gameObject;
+        Debug.Log(self.name.ToString());
+        drawingObject = GameObject.FindGameObjectWithTag("Line").gameObject;
+        Debug.Log(drawingObject.name.ToString());
+        drawing = drawingObject.GetComponent<LineDraw>();
     }
 
     // Update is called once per frame
@@ -26,13 +33,22 @@ public class platform : MonoBehaviour
         if(rb.position.z < 45 && spawned != true)
         {
             
-            Instantiate(platforms[Random.Range(0, 2)], transform.position +  new Vector3(0, 0, 174), new Quaternion(0, 0, 0, 0));
+            /*GameObject platf =  */Instantiate(platforms[Random.Range(0, 2)], transform.position +  new Vector3(0, 0, 174), new Quaternion(0, 0, 0, 0));
+            
             spawned = true;
         }
         if(rb.position.z < -100 && destroyed != true)
         {
             destroyed = true;
             Destroy(gameObject);
+        }
+        if(rb.position.z < 71)
+        {
+            /*drawing.platfType = self.name.ToString();
+            drawing.platf = self;
+            drawing.SetPlatf(self);*/
+            drawingObject.GetComponent<LineDraw>().platf = self;
+            drawingObject.GetComponent<LineDraw>().SetPlatf(self);
         }
     }
 }
