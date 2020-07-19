@@ -26,6 +26,7 @@ public class LineDraw : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Destroy(curentLine);
             CreateLine();
         }
         if (Input.GetMouseButton(0))
@@ -69,13 +70,15 @@ public class LineDraw : MonoBehaviour
             {
                 AddPoints(5);
             }
-            Destroy(curentLine);
+            
+                //Destroy(curentLine);
+            
         }
     }
 
     void CreateLine()
     {       
-            Destroy(curentLine);
+            
             curentLine = Instantiate(linePrefab, Vector3.zero, Quaternion.identity);
             lineRenderer = curentLine.GetComponent<LineRenderer>();
             edgeCollider = curentLine.GetComponent<EdgeCollider2D>();

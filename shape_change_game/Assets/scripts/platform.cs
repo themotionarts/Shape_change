@@ -16,6 +16,7 @@ public class platform : MonoBehaviour
     public Vector3 spawnPos;
     public GameObject[] platforms;
     public GameObject self;
+    public bool done = false;
     void Start()
     {
         self = this.gameObject;
@@ -42,13 +43,14 @@ public class platform : MonoBehaviour
             destroyed = true;
             Destroy(gameObject);
         }
-        if(rb.position.z < 71)
+        if(rb.position.z < 90 && !done)
         {
             /*drawing.platfType = self.name.ToString();
             drawing.platf = self;
             drawing.SetPlatf(self);*/
             drawingObject.GetComponent<LineDraw>().platf = self;
             drawingObject.GetComponent<LineDraw>().SetPlatf(self);
+            done = true;
         }
     }
 }

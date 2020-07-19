@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: drawing
+    uniqueID: 911365735
+    locked: 0
+  - name: everything
+    uniqueID: 3863138605
+    locked: 0
