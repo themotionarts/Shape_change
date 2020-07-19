@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,7 +35,7 @@ public class platform : MonoBehaviour
         if(rb.position.z < 45 && spawned != true)
         {
             
-            /*GameObject platf =  */Instantiate(platforms[Random.Range(0, 2)], transform.position +  new Vector3(0, 0, 174), new Quaternion(0, 0, 0, 0));
+            /*GameObject platf =  */Instantiate(platforms[UnityEngine.Random.Range(0, 2)], transform.position +  new Vector3(0, 0, 174), new Quaternion(0, 0, 0, 0));
             
             spawned = true;
         }
